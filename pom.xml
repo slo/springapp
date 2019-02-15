@@ -60,7 +60,31 @@
             <artifactId>log4j-core</artifactId>
             <version>2.11.1</version>
         </dependency>
+        <dependency>
+            <groupId>org.spockframework</groupId>
+            <artifactId>spock-core</artifactId>
+            <version>1.2-groovy-2.5</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
+
+    <build>
+        <plugins>
+    <plugin>
+        <groupId>org.codehaus.gmavenplus</groupId>
+        <artifactId>gmavenplus-plugin</artifactId>
+        <version>1.6.2</version>
+        <executions>
+            <execution>
+                <goals>
+                    <goal>addTestSources</goal>
+                    <goal>compileTests</goal>
+                </goals>
+            </execution>
+        </executions>
+    </plugin>
+        </plugins>
+    </build>
 
 
 </project>
