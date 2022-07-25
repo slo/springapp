@@ -10,22 +10,14 @@ import sl.testapp.feature.FeeCalculator;
 
 import java.math.BigDecimal;
 
-@Component
-public class SampleImpl {
+public class Runner {
 
     private static final Logger LOGGER = LogManager.getLogger();
-
-    @Autowired
-    private FeeCalculator aa;
-
-    public void doSth(){
-        LOGGER.debug(aa.calculate(new BigDecimal(5), new BigDecimal(7)));
-    }
 
     public static void main(final String[] args) {
         final AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(Config.class);
 
-        SampleImpl si = ctx.getBean(SampleImpl.class);
+        Runner si = ctx.getBean(Runner.class);
         si.doSth();
         ctx.close();
     }
