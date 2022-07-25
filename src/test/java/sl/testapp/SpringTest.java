@@ -13,8 +13,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.annotation.AnnotationUtils;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
-import sl.testapp.annotations.MyCustomAnnotation;
-import sl.testapp.anotherfeature.Implementers;
 import sl.testapp.configuration.Config;
 import sl.testapp.configuration.TestConfig;
 import sl.testapp.feature.FeeCalculator;
@@ -33,8 +31,6 @@ public class SpringTest {
 
     @Autowired
     private FeeCalculator feeCalculator;
-    @Autowired
-    private List<Implementers> services;
 
     @Before
     public void setup() {
@@ -55,15 +51,6 @@ public class SpringTest {
         final BigDecimal result = feeCalculator.calculate(new BigDecimal(7), new BigDecimal(2));
         LOGGER.debug("Result2: " + result.toPlainString());
         assertThat(result).isCloseTo(new BigDecimal(14), Offset.offset(new BigDecimal(0.01)));
-    }
-
-    @Test
-    public void checkServices() {
-        for(Implementers implementer : services){
-            final MyCustomAnnotation annotation = AnnotationUtils.findAnnotation(implementer.getClass(), MyCustomAnnotation.class);
-            LOGGER.debug(annotation.discriminator());
-        }
-
     }
 
 }

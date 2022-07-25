@@ -10,14 +10,13 @@ import sl.testapp.feature.FeeCalculator;
 
 import java.math.BigDecimal;
 
-public class Runner {
 
-    private static final Logger LOGGER = LogManager.getLogger();
+public class Runner {
 
     public static void main(final String[] args) {
         final AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(Config.class);
 
-        Runner si = ctx.getBean(Runner.class);
+        var si = ctx.getBean(SampleApplication.class);
         si.doSth();
         ctx.close();
     }
