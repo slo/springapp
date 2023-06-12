@@ -1,0 +1,29 @@
+1. injection
+	- constructor
+	- autowired
+	- setter
+	- by type
+	- by name
+	- naming beans (annotation, factory method)
+	- collection
+	
+DONE
+	
+1. scope
+	- web ones (spring mvc)
+	- how proxying works(spring mvc)
+	
+1. start of container
+	- events
+	
+1. starters!
+	
+1. configuration (component scan)
+
+1. type of stereotype (Service, repository)
+	- custom annotations
+1. public methods vs private
+
+1. mocking
+
+
