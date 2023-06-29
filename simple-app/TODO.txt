@@ -26,4 +26,10 @@ DONE
 
 1. mocking
 
+wywal lomboka i dodaj bolierplate code
+
+osobno małe conieco o lomboku
+
+lombok @Data dla encji Hibernate - piftall !!!
+
 

@@ -23,20 +23,20 @@ import sl.testapp.configuration.TestConfig;
 import sl.testapp.session.SessionService;
 
 @RunWith(SpringRunner.class)
-@ContextConfiguration(classes = {Config.class, TestConfig.class})
+@ContextConfiguration(classes = { Config.class, TestConfig.class })
 public class SpringTest {
 
-    private static final Logger LOGGER = LogManager.getLogger();
+	private static final Logger LOGGER = LogManager.getLogger();
 
-    @Autowired
-    private SessionService sessionService;
+	@Autowired
+	private SessionService sessionService;
 
-    @Before
-    public void setup() {
-        MockitoAnnotations.initMocks(this);
-    }
+	@Before
+	public void setup() {
+		MockitoAnnotations.initMocks(this);
+	}
 
-    @Test
+	@Test
     public void checkResultIfFeatureOn(){
         when(TestConfig.parameterRepository.isFeatureOn(anyString())).thenReturn(true);
         var result = sessionService.checkSession(7L, 2L);
@@ -44,7 +44,7 @@ public class SpringTest {
         assertThat(result).isTrue();
     }
 
-    @Test
+	@Test
     public void checkResultIfFeatureOff(){
         when(TestConfig.parameterRepository.isFeatureOn(anyString())).thenReturn(false);
         var result = sessionService.checkSession(7L, 2L);

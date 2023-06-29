@@ -10,18 +10,15 @@ import org.springframework.web.context.WebApplicationContext;
 @Component
 @Scope(value = WebApplicationContext.SCOPE_REQUEST, proxyMode = ScopedProxyMode.TARGET_CLASS)
 public class MyBeanRequest {
-	
+
 	private static final Logger log = LoggerFactory.getLogger(MyBeanRequest.class);
 
 	public MyBeanRequest() {
 		log.debug("Creating new instance");
 	}
-	
-	
+
 	public String getVal() {
 		return String.valueOf(hashCode());
 	}
-	
-	
 
 }

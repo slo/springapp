@@ -9,16 +9,16 @@ import org.springframework.context.annotation.Primary;
 @Configuration
 public class TestConfig {
 
-    @Mock
-    public static FeatureRepository parameterRepository;
+	@Mock
+	public static FeatureRepository parameterRepository;
 
-    public TestConfig(){
-        MockitoAnnotations.initMocks(this);
-    }
+	public TestConfig() {
+		MockitoAnnotations.initMocks(this);
+	}
 
-    @Bean
-    @Primary
-    public FeatureRepository getParameterRepository(){
-        return parameterRepository;
-    }
+	@Bean
+	@Primary
+	public FeatureRepository getParameterRepository() {
+		return parameterRepository;
+	}
 }

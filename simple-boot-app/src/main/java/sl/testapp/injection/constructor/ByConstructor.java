@@ -6,10 +6,9 @@ import sl.testapp.injection.SomeDependency;
 
 @Component
 public class ByConstructor {
-	
+
 	private SomeDependency someDependency;
 
-	
 	public ByConstructor(SomeDependency someDependency) {
 		this.someDependency = someDependency;
 	}

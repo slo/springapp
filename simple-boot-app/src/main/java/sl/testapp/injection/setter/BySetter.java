@@ -9,7 +9,7 @@ import sl.testapp.injection.SomeDependency;
 public class BySetter {
 
 	private SomeDependency someDependency;
-	
+
 	@Autowired
 	public void setSomeDependency(SomeDependency someDependency) {
 		this.someDependency = someDependency;
