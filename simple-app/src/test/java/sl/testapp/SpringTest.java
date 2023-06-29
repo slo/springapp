@@ -5,7 +5,6 @@ import static org.junit.Assert.assertThat;
 import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.when;
 
-import java.io.ObjectInputFilter.Config;
 import java.math.BigDecimal;
 
 import org.apache.logging.log4j.LogManager;
@@ -19,6 +18,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import sl.testapp.configuration.Config;
 import sl.testapp.configuration.TestConfig;
 import sl.testapp.session.SessionService;
 

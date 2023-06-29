@@ -1,6 +1,6 @@
 package sl.testapp.spam.anotherfeature;
 
-import sl.testapp.annotations.MyFirstSpecificAnnotation;
+import sl.testapp.spam.annotations.MyFirstSpecificAnnotation;
 
 @MyFirstSpecificAnnotation
 public class ImplementedFirst implements Implementers{
